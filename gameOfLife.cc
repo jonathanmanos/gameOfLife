@@ -22,19 +22,15 @@ std::string dashes = "+ ";
 std::string organismLine = "";
 int locationRow = 0;
 int locationCol = 0;
-int amountGenerations = 4;
+int amountGenerations = 0;
 int amountOrganisms = 0;
 int surroundingCounter = 0;
 
 
 
 //Constants
-static const int activeRows = 18;
-static const int activeCols = 50;
-static const int totalRows = activeRows + 2;
-static const int totalCols = activeCols + 2;
-static const char ESC = 27;
-
+static const int totalRows = 18;
+static const int totalCols = 50;
 
 //test value of deleting same node twice
 int main(int argc, char * argv [])
@@ -64,16 +60,14 @@ int main(int argc, char * argv [])
   st.clear();
 
 
-
+    // Set locations of organisms
   for(int i = 0; i < amountOrganisms; i++)
   {
-    // Set locations of organisms
     std::cerr << "\nLocation of organism " << i+1 << " is on row? ";
     getline(cin, locationInputRow);
     st.str(locationInputRow);
     st >> locationRow;
     st.clear();
-
 
     std::cerr << "\nLocation of organism " << i+1 << " is on column? ";
     getline(cin, locationInputCol);
@@ -81,7 +75,7 @@ int main(int argc, char * argv [])
     st >> locationCol;
     st.clear();
 
-    board[locationRow][locationCol] = LIVING;
+    board[locationRow-1][locationCol-1] = LIVING;
   }
 
 
@@ -141,7 +135,7 @@ int main(int argc, char * argv [])
 
     for (int i = 0; i < totalRows; i++)
     {
-      organismLine.append("|");
+      organismLine.append("| ");
 
       if(i==0)
       {
@@ -196,7 +190,7 @@ int main(int argc, char * argv [])
       }
 
 
-      organismLine.append(" |");
+      organismLine.append("|");
       std::cerr << organismLine << std::endl;
       organismLine = "";
 
