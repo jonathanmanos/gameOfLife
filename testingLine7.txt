@@ -1,26 +1,32 @@
-C:\Users\Jonny\Documents\GitHub\gameOfLife>GAMEOFLIFE
-
-How many organisms initially? 5
+How many organisms initially? 7
 
 Location of organism 1 is on row? 9
 
-Location of organism 1 is on column? 25
+Location of organism 1 is on column? 22
 
 Location of organism 2 is on row? 9
 
-Location of organism 2 is on column? 24
+Location of organism 2 is on column? 23
 
 Location of organism 3 is on row? 9
 
-Location of organism 3 is on column? 23
+Location of organism 3 is on column? 24
 
-Location of organism 4 is on row? 10
+Location of organism 4 is on row? 9
 
-Location of organism 4 is on column? 24
+Location of organism 4 is on column? 25
 
-Location of organism 5 is on row? 8
+Location of organism 5 is on row? 9
 
-Location of organism 5 is on column? 24
+Location of organism 5 is on column? 26
+
+Location of organism 6 is on row? 9
+
+Location of organism 6 is on column? 27
+
+Location of organism 7 is on row? 9
+
+Location of organism 7 is on column? 28
 
 Generations? 10
 
@@ -33,9 +39,9 @@ Initial:
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
-|                                               A                                                     |
-|                                             A A A                                                   |
-|                                               A                                                     |
+|                                                                                                     |
+|                                           A A A A A A A                                             |
+|                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
@@ -45,24 +51,24 @@ Initial:
 |                                                                                                     |
 |                                                                                                     |
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-
+Final:
 Generation 10:
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
 |                                                                                                     |
 |                                                                                                     |
+|                                               A A A                                                 |
 |                                                                                                     |
+|                                             A   A   A                                               |
+|                                             A A   A A                                               |
+|                                         A A           A A                                           |
+|                                     A     A     A     A     A                                       |
+|                                     A   A     A   A     A   A                                       |
+|                                     A     A     A     A     A                                       |
+|                                         A A           A A                                           |
+|                                             A A   A A                                               |
+|                                             A   A   A                                               |
 |                                                                                                     |
-|                                                                                                     |
-|                                             A A A                                                   |
-|                                                                                                     |
-|                                         A           A                                               |
-|                                         A           A                                               |
-|                                         A           A                                               |
-|                                                                                                     |
-|                                             A A A                                                   |
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
+|                                               A A A                                                 |
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |

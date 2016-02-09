@@ -144,7 +144,7 @@ int main(int argc, char * argv [])
 
       for (int j = 0; j < totalCols; j++)
       {
-        
+
 
 
           surroundingCounter+= (board[i-1][j-1] == LIVING || board[i-1][j-1] == DYING);
