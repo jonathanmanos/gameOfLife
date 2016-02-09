@@ -146,15 +146,22 @@ int main(int argc, char * argv [])
       {
 
 
-
-          surroundingCounter+= (board[i-1][j-1] == LIVING || board[i-1][j-1] == DYING);
-          surroundingCounter+= (board[i-1][j] == LIVING || board[i-1][j] == DYING);
-          surroundingCounter+= (board[i-1][j+1] == LIVING || board[i-1][j+1] == DYING);
-          surroundingCounter+= (board[i][j-1] == LIVING || board[i][j-1] == DYING);
-          surroundingCounter+= (board[i][j+1] == LIVING || board[i][j+1] == DYING);
-          surroundingCounter+= (board[i+1][j-1] == LIVING || board[i+1][j-1] == DYING);
-          surroundingCounter+= (board[i+1][j] == LIVING || board[i+1][j] == DYING);
-          surroundingCounter+= (board[i+1][j+1] == LIVING || board[i+1][j+1] == DYING);
+          if(i-1 >= 0 && j-1 >=0)
+            surroundingCounter+= (board[i-1][j-1] == LIVING || board[i-1][j-1] == DYING);
+          if(i-1 >= 0)
+            surroundingCounter+= (board[i-1][j] == LIVING || board[i-1][j] == DYING);
+          if(i-1 >= 0 && j+1 < totalCols)
+            surroundingCounter+= (board[i-1][j+1] == LIVING || board[i-1][j+1] == DYING);
+          if(j-1 >= 0)
+            surroundingCounter+= (board[i][j-1] == LIVING || board[i][j-1] == DYING);
+          if(j+1 <= totalCols)
+            surroundingCounter+= (board[i][j+1] == LIVING || board[i][j+1] == DYING);
+          if(i+1 <totalRows && j-1 >= 0)
+            surroundingCounter+= (board[i+1][j-1] == LIVING || board[i+1][j-1] == DYING);
+          if(i+1 <totalRows)
+            surroundingCounter+= (board[i+1][j] == LIVING || board[i+1][j] == DYING);
+          if(i+1 <=totalRows && j+1 < totalCols)
+            surroundingCounter+= (board[i+1][j+1] == LIVING || board[i+1][j+1] == DYING);
 
           if((surroundingCounter < 2 || surroundingCounter > 3) && board[i][j] == LIVING)
           {
