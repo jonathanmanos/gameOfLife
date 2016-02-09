@@ -1,0 +1,271 @@
+C:\Users\Jonny\Documents\GitHub\gameOfLife>GAMEOFLIFE
+
+How many organisms initially? 6
+
+Location of organism 1 is on row? 6
+
+Location of organism 1 is on column? 6
+
+Location of organism 2 is on row? 6
+
+Location of organism 2 is on column? 8
+
+Location of organism 3 is on row? 7
+
+Location of organism 3 is on column? 7
+
+Location of organism 4 is on row? 8
+
+Location of organism 4 is on column? 7
+
+Location of organism 5 is on row? 9
+
+Location of organism 5 is on column? 6
+
+Location of organism 6 is on row? 9
+
+Location of organism 6 is on column? 8
+
+Generations? 10
+
+Initial:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|           A   A                                                                                     |
+|             A                                                                                       |
+|             A                                                                                       |
+|           A   A                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 1:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|             A                                                                                       |
+|           A A A                                                                                     |
+|           A A A                                                                                     |
+|             A                                                                                       |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 2:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|           A A A                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|           A A A                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 3:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|             A                                                                                       |
+|             A                                                                                       |
+|             A                                                                                       |
+|             A                                                                                       |
+|             A                                                                                       |
+|             A                                                                                       |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 4:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|           A A A                                                                                     |
+|           A A A                                                                                     |
+|           A A A                                                                                     |
+|           A A A                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 5:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|             A                                                                                       |
+|           A   A                                                                                     |
+|         A       A                                                                                   |
+|         A       A                                                                                   |
+|           A   A                                                                                     |
+|             A                                                                                       |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 6:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|             A                                                                                       |
+|           A A A                                                                                     |
+|         A A   A A                                                                                   |
+|         A A   A A                                                                                   |
+|           A A A                                                                                     |
+|             A                                                                                       |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 7:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|           A A A                                                                                     |
+|         A       A                                                                                   |
+|                                                                                                     |
+|                                                                                                     |
+|         A       A                                                                                   |
+|           A A A                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 8:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|             A                                                                                       |
+|           A A A                                                                                     |
+|           A A A                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|           A A A                                                                                     |
+|           A A A                                                                                     |
+|             A                                                                                       |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 9:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|           A A A                                                                                     |
+|                                                                                                     |
+|           A   A                                                                                     |
+|             A                                                                                       |
+|             A                                                                                       |
+|           A   A                                                                                     |
+|                                                                                                     |
+|           A A A                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+Press RETURN to continue
+Generation 10:
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                                                                                                     |
+|                                                                                                     |
+|             A                                                                                       |
+|             A                                                                                       |
+|           A   A                                                                                     |
+|             A                                                                                       |
+|           A A A                                                                                     |
+|           A A A                                                                                     |
+|             A                                                                                       |
+|           A   A                                                                                     |
+|             A                                                                                       |
+|             A                                                                                       |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +

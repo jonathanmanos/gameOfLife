@@ -144,8 +144,8 @@ int main(int argc, char * argv [])
 
       for (int j = 0; j < totalCols; j++)
       {
-        if(g != 0)
-        {
+        
+
 
           surroundingCounter+= (board[i-1][j-1] == LIVING || board[i-1][j-1] == DYING);
           surroundingCounter+= (board[i-1][j] == LIVING || board[i-1][j] == DYING);
@@ -167,7 +167,7 @@ int main(int argc, char * argv [])
           }
           surroundingCounter = 0;
 
-        }
+
 
         if(board[i][j] == NONE)
         {
@@ -176,16 +176,16 @@ int main(int argc, char * argv [])
         }
         else if(board[i][j] == LIVING)
         {
-          organismLine.append("L ");
+          organismLine.append("A ");
           //std::cout << "LIVING";
         }
         else if(board[i][j] == GESTATING)
         {
-          organismLine.append("G ");
+          organismLine.append("  ");
         }
         else if(board[i][j] == DYING)
         {
-          organismLine.append("D ");
+          organismLine.append("A ");
         }
       }
 
