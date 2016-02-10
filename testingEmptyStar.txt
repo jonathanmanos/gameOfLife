@@ -2,21 +2,7 @@ Lives Forever:
 
 How many organisms initially? 4
 
-Location of organism 1 is on row? 9
-
-Location of organism 1 is on column? 25
-
-Location of organism 2 is on row? 10
-
-Location of organism 2 is on column? 26
-
-Location of organism 3 is on row? 10
-
-Location of organism 3 is on column? 24
-
-Location of organism 4 is on row? 11
-
-Location of organism 4 is on column? 25
+(locations omitted to save space)
 
 Generations? 10
 

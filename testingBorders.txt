@@ -1,21 +1,13 @@
-C:\Users\Jonny\Documents\GitHub\gameOfLife>GAMEOFLIFE
+How many organisms initially? 12
 
 (locations omitted to save space)
 
-Generations? 10
+Generations? 3
 
 Initial:
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                               A                                                     |
-|                                             A A A                                                   |
-|                                               A                                                     |
+|   A                                                                                             A   |
+| A A                                                                                             A A |
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
@@ -24,26 +16,34 @@ Initial:
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+| A A                                                                                             A A |
+|   A                                                                                             A   |
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-
-Generation 10:
+Press RETURN to continue
+Generation 3:
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                                                                                     |
-|                                             A A A                                                   |
-|                                                                                                     |
-|                                         A           A                                               |
-|                                         A           A                                               |
-|                                         A           A                                               |
-|                                                                                                     |
-|                                             A A A                                                   |
+| A A                                                                                             A A |
+| A A                                                                                             A A |
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
 |                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+|                                                                                                     |
+| A A                                                                                             A A |
+| A A                                                                                             A A |
 + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +

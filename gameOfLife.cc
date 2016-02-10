@@ -6,10 +6,12 @@
 *
 */
 
+//include statements
 #include <iostream>
 #include <string>
 #include <sstream>
 
+//using cerr and cin
 using std::cerr;
 using std::cin;
 
@@ -26,22 +28,20 @@ int amountGenerations = 0;
 int amountOrganisms = 0;
 int surroundingCounter = 0;
 
-
-
-//Constants
+//Constants that set the board size
 static const int totalRows = 18;
 static const int totalCols = 50;
 
-//test value of deleting same node twice
+//main function of the game of life program
 int main(int argc, char * argv [])
 {
-
+  //enum for an Organism so Organism doesn't need to be an object
   enum Organism {NONE, GESTATING, LIVING, DYING};
 
+  //makes a board of organisms with constants totalRows and totalCols
   Organism board[totalRows][totalCols];
 
-  Organism currentOrganism;
-
+  //sets all the organisms on the board to NONE
   for (int i = 0; i < totalRows; i++)
   {
     for (int j = 0; j < totalCols; j++)
@@ -50,9 +50,10 @@ int main(int argc, char * argv [])
     }
   }
 
+  //creates the stringstream object
   std::stringstream st;
 
-  // Set amount of organisms
+  // Set amount of organisms from user input
   std::cerr << "\nHow many organisms initially? ";
   getline(cin, organismInput);
   st.str(organismInput);
@@ -60,7 +61,7 @@ int main(int argc, char * argv [])
   st.clear();
 
 
-    // Set locations of organisms
+  // Set locations of organisms from user input
   for(int i = 0; i < amountOrganisms; i++)
   {
     std::cerr << "\nLocation of organism " << i+1 << " is on row? ";
@@ -75,21 +76,22 @@ int main(int argc, char * argv [])
     st >> locationCol;
     st.clear();
 
+    // set organism at that location to LIVING
     board[locationRow-1][locationCol-1] = LIVING;
   }
 
 
-  // Set value to the string for new person
+  // Set amount of generations from user input
   std::cerr << "\nGenerations? ";
   getline(cin, generationsInput);
   st.str(generationsInput);
   st >> amountGenerations;
   st.clear();
 
+  //skip a line
   std::cerr << "\n";
 
-
-
+  //create the string for the top and bottom border of the game
   for (int i = 0; i < totalCols; i++)
   {
     dashes.append("- ");
@@ -97,10 +99,10 @@ int main(int argc, char * argv [])
     dashes.append("+");
   }
 
-
+  //generation loop for the game to go through multiple generations
   for (int g = 0; g < amountGenerations + 1; g++)
   {
-
+    //shows the board as initial before generations happen
     if(g==0)
     {
       std::cout << "Initial:" << std::endl;
@@ -115,67 +117,71 @@ int main(int argc, char * argv [])
         for (int j = 0; j < totalCols; j++)
         {
           if(board[i][j] == GESTATING)
-          {
-            board[i][j] = LIVING;
-          }
+          board[i][j] = LIVING;
           if(board[i][j] == DYING)
-          {
-            board[i][j] = NONE;
-          }
+          board[i][j] = NONE;
         }
       }
     }
 
-
+    //shows the generation above the game board
     if(g!=0)
     {
       std::cout << "Generation "
       << g << ":" << std::endl;
     }
-
+    //goes through each row of the game board
     for (int i = 0; i < totalRows; i++)
     {
+      //makes the left border
       organismLine.append("| ");
 
+      //makes the top border
       if(i==0)
       {
         std::cerr << dashes << std::endl;
       }
 
+      //goes through each spot on the row of the game board
       for (int j = 0; j < totalCols; j++)
       {
+        //game logic, checks surrounding organisms of a space and
+        //adds to a counter, checks boundaries so organisms on
+        //border do not go out of bounds.
+        if(i-1 >= 0 && j-1 >=0)
+        surroundingCounter+= (board[i-1][j-1] == LIVING || board[i-1][j-1] == DYING);
+        if(i-1 >= 0)
+        surroundingCounter+= (board[i-1][j] == LIVING || board[i-1][j] == DYING);
+        if(i-1 >= 0 && j+1 < totalCols)
+        surroundingCounter+= (board[i-1][j+1] == LIVING || board[i-1][j+1] == DYING);
+        if(j-1 >= 0)
+        surroundingCounter+= (board[i][j-1] == LIVING || board[i][j-1] == DYING);
+        if(j+1 < totalCols)
+        surroundingCounter+= (board[i][j+1] == LIVING || board[i][j+1] == DYING);
+        if(i+1 <totalRows && j-1 >= 0)
+        surroundingCounter+= (board[i+1][j-1] == LIVING || board[i+1][j-1] == DYING);
+        if(i+1 < totalRows)
+        surroundingCounter+= (board[i+1][j] == LIVING || board[i+1][j] == DYING);
+        if(i+1 < totalRows && j+1 < totalCols)
+        surroundingCounter+= (board[i+1][j+1] == LIVING || board[i+1][j+1] == DYING);
+
+        //if a living organism is not surrounded by 2 or 3 organisms it dies
+        if((surroundingCounter < 2 || surroundingCounter > 3) && board[i][j] == LIVING)
+        {
+          board[i][j] = DYING;
+        }
+        //if an empty space is surrounded by exactly 3 organisms a new child
+        //is born
+        if(surroundingCounter == 3 && board[i][j] == NONE)
+        {
+          board[i][j] = GESTATING;
+        }
+        //set the space counter back to 0 for the next space
+        surroundingCounter = 0;
 
 
-          if(i-1 >= 0 && j-1 >=0)
-            surroundingCounter+= (board[i-1][j-1] == LIVING || board[i-1][j-1] == DYING);
-          if(i-1 >= 0)
-            surroundingCounter+= (board[i-1][j] == LIVING || board[i-1][j] == DYING);
-          if(i-1 >= 0 && j+1 < totalCols)
-            surroundingCounter+= (board[i-1][j+1] == LIVING || board[i-1][j+1] == DYING);
-          if(j-1 >= 0)
-            surroundingCounter+= (board[i][j-1] == LIVING || board[i][j-1] == DYING);
-          if(j+1 <= totalCols)
-            surroundingCounter+= (board[i][j+1] == LIVING || board[i][j+1] == DYING);
-          if(i+1 <totalRows && j-1 >= 0)
-            surroundingCounter+= (board[i+1][j-1] == LIVING || board[i+1][j-1] == DYING);
-          if(i+1 <totalRows)
-            surroundingCounter+= (board[i+1][j] == LIVING || board[i+1][j] == DYING);
-          if(i+1 <=totalRows && j+1 < totalCols)
-            surroundingCounter+= (board[i+1][j+1] == LIVING || board[i+1][j+1] == DYING);
-
-          if((surroundingCounter < 2 || surroundingCounter > 3) && board[i][j] == LIVING)
-          {
-            board[i][j] = DYING;
-
-          }
-          if(surroundingCounter == 3 && board[i][j] == NONE)
-          {
-            board[i][j] = GESTATING;
-          }
-          surroundingCounter = 0;
-
-
-
+        //adds emptiness to the space if the space is nonliving
+        //adds A to the space if the space is living or dying
         if(board[i][j] == NONE)
         {
           organismLine.append("  ");
@@ -196,18 +202,21 @@ int main(int argc, char * argv [])
         }
       }
 
-
+      //makes the right border
       organismLine.append("|");
+      //prints the string containing the full row of the game
       std::cerr << organismLine << std::endl;
+      //sets the string for a row back to nothing
       organismLine = "";
 
+      //if it is the final row, prints the bottom border
       if(i == totalRows-1)
       {
         std::cerr << dashes << std::endl;
       }
-
     }
 
+    //asks for user to press return to see the next generation display
     if(g != amountGenerations)
     {
       std::cout << "Press RETURN to continue";
